@@ -1,0 +1,37 @@
+name: ecommerce_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  cached_network_image: ^3.4.1
+  dio: ^5.7.0
+  fluentui_icons: ^1.0.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  font_awesome_flutter: ^10.7.0
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+  - assets/images/
+
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Lora,Roboto/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Lora,Roboto/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Lora,Roboto/Roboto/Roboto-Italic.ttf
+          style: italic
