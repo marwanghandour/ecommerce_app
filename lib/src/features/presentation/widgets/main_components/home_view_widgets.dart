@@ -1,11 +1,8 @@
-import 'package:ecommerce_app/src/core/utils/contants.dart';
-import 'package:ecommerce_app/src/features/presentation/blocs/electronics/electronics_products_bloc.dart';
-import 'package:ecommerce_app/src/features/presentation/blocs/electronics/electronics_products_state.dart';
 import 'package:ecommerce_app/src/features/presentation/blocs/product/product_bloc.dart';
 import 'package:ecommerce_app/src/features/presentation/blocs/product/product_state.dart';
+import 'package:ecommerce_app/src/features/presentation/widgets/components/sale_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ecommerce_app/src/core/utils/app_colors.dart';
 import 'package:ecommerce_app/src/features/data/models/product_model.dart';
 import 'package:ecommerce_app/src/features/presentation/widgets/components/custom_button.dart';
 import 'package:ecommerce_app/src/features/presentation/widgets/elements/custom_circle_indicator.dart';
@@ -49,25 +46,7 @@ class HomeViewWidgets extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: SearchWidget(),
         ),
-        Container(
-          margin: const EdgeInsets.only(right: 10, left: 20),
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: AppColors.primaryDark,
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          width: 360,
-          height: 55,
-          child: const Text(
-            'Delivery is 50% Cheaper',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
+        const SaleContainer(),
         const SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.all(16.0),
@@ -90,7 +69,7 @@ class HomeViewWidgets extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 200, // Height of the horizontal ListView
+          height: 200, 
           child: ListView.builder(
             itemCount: 1,
             scrollDirection: Axis.horizontal,

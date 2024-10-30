@@ -4,7 +4,6 @@ import 'package:ecommerce_app/src/features/presentation/blocs/clothing/clothing_
 import 'package:ecommerce_app/src/features/presentation/widgets/elements/custom_circle_indicator.dart';
 import 'package:ecommerce_app/src/features/presentation/widgets/main_components/product_grid_view.dart';
 import 'package:ecommerce_app/src/features/presentation/widgets/navigation/custom_sliver_app_bar.dart';
-import 'package:ecommerce_app/src/features/presentation/widgets/navigation/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

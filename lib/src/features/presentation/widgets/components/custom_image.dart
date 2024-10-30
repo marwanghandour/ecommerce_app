@@ -10,14 +10,11 @@ class CustomImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
-      child: AspectRatio(
-        aspectRatio: 2.6 / 4,
-        child: CachedNetworkImage(
-          fit: BoxFit.fill,
-          imageUrl: imageUrl,
-          errorWidget: (context, url, error) => const Icon(
-            AppIcons.error,
-          ),
+      child: CachedNetworkImage(
+        fit: BoxFit.contain,
+        imageUrl: imageUrl,
+        errorWidget: (context, url, error) => const Icon(
+          AppIcons.error,
         ),
       ),
     );
