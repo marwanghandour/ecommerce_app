@@ -1,5 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:ecommerce_app/src/features/data/repositories/product_repo.dart';
+import 'package:ecommerce_app/src/features/presentation/blocs/clothing/clothing_bloc.dart';
+import 'package:ecommerce_app/src/features/presentation/blocs/clothing/clothing_event.dart';
+import 'package:ecommerce_app/src/features/presentation/blocs/electronics/electronics_products_bloc.dart';
+import 'package:ecommerce_app/src/features/presentation/blocs/electronics/electronics_products_event.dart';
+import 'package:ecommerce_app/src/features/presentation/blocs/jewllery/jewllery_bloc.dart';
+import 'package:ecommerce_app/src/features/presentation/blocs/jewllery/jewllery_event.dart';
 import 'package:ecommerce_app/src/features/presentation/blocs/product/product_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,6 +29,18 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<ProductBloc>(
           create: (context) => ProductBloc(ProductRepository(Dio()))..add(FetchProducts()),
+        ),
+
+         BlocProvider<ElectronicsProductsBloc>(
+          create: (context) => ElectronicsProductsBloc(ProductRepository(Dio()))..add(FetchElectronics()),
+        ),
+
+        BlocProvider<JewlleryBloc>(
+          create: (context) => JewlleryBloc(ProductRepository(Dio()))..add(FetchJewllery()),
+        ),
+
+        BlocProvider<ClothingBloc>(
+          create: (context) => ClothingBloc(ProductRepository(Dio()))..add(FetchClothing()),
         ),
       ],
       child: BlocBuilder<ThemeBloc, ThemeData>(

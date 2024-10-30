@@ -17,7 +17,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 1,
-      surfaceTintColor: Colors.white,
       title: Row(
         children: [
           if (logoUrl != null) 

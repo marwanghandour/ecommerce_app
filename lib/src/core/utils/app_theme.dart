@@ -20,11 +20,11 @@ class AppTheme {
       surfaceTintColor: AppColors.surfaceLight,
       color: AppColors.surfaceLight,
       titleTextStyle: TextStyle(
-        color: AppColors.onPrimaryLight,
+        color: AppColors.onBackgroundLight,
         fontFamily: AppStrings.fontFamily,
         fontSize: 20,
       ),
-      iconTheme: IconThemeData(color: AppColors.onPrimaryLight),
+      iconTheme: IconThemeData(color: AppColors.onBackgroundLight),
     ),
     buttonTheme: const ButtonThemeData(
       buttonColor: AppColors.primaryLight,
@@ -64,11 +64,11 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
        surfaceTintColor: AppColors.surfaceDark,
       titleTextStyle: TextStyle(
-        color: AppColors.onPrimaryDark,
+        color: AppColors.onBackgroundDark,
         fontFamily: AppStrings.fontFamily,
         fontSize: 20,
       ),
-      iconTheme: IconThemeData(color: AppColors.onPrimaryDark),
+      iconTheme: IconThemeData(color: AppColors.onBackgroundDark),
     ),
     buttonTheme: const ButtonThemeData(
       buttonColor: AppColors.primaryDark,

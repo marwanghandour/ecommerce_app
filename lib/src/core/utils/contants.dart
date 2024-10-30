@@ -64,24 +64,4 @@ class Constants {
       ),
     );
   }
-
-  // Method to show a loading dialog
-  static Future<void> showLoadingDialog(BuildContext context) {
-    return showDialog<void>(
-      context: context,
-      barrierDismissible: false, // Prevents closing by tapping outside
-      builder: (BuildContext context) {
-        return const Center(
-          child: CircularProgressIndicator(
-          
-          ),
-        );
-      },
-    );
-  }
-
-  // Method to hide the loading dialog
-  static void hideLoadingDialog(BuildContext context) {
-    Navigator.of(context).pop(); // Close the loading dialog
-  }
 }
