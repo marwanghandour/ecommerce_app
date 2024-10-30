@@ -25,7 +25,6 @@ class ElectronicsCategoryView extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               slivers: [
                 CustomSliverAppBar(
-                  Ispinned: false,
                   expandedHeight: 0,
             title: "Electronics",
             actions: [
@@ -33,7 +32,7 @@ class ElectronicsCategoryView extends StatelessWidget {
                 icon: const Icon(AppIcons.search),
                 onPressed: () {},
               ),
-              ],
+              ], isPinned: false,
               ),
                 ProductGridView(products: state.electronics), 
               ],

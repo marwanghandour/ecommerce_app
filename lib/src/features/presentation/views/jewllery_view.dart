@@ -24,7 +24,6 @@ class JewlleryView extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               slivers: [
                 CustomSliverAppBar(
-                  Ispinned: false,
                   expandedHeight: 0,
             title: "Jewllery",
             actions: [
@@ -32,7 +31,7 @@ class JewlleryView extends StatelessWidget {
                 icon: const Icon(AppIcons.search),
                 onPressed: () {},
               ),
-              ],
+              ], isPinned: false,
               ),
                 ProductGridView(products: state.jewllery), 
               ],

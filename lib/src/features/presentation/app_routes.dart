@@ -1,8 +1,11 @@
+import 'package:ecommerce_app/src/features/data/models/product_model.dart';
 import 'package:ecommerce_app/src/features/presentation/views/clothing_view.dart';
 import 'package:ecommerce_app/src/features/presentation/views/electronics_category_view.dart';
 import 'package:ecommerce_app/src/features/presentation/views/error_view.dart';
 import 'package:ecommerce_app/src/features/presentation/views/home_screen.dart';
 import 'package:ecommerce_app/src/features/presentation/views/jewllery_view.dart';
+import 'package:ecommerce_app/src/features/presentation/views/product_detail_view.dart';
+import 'package:ecommerce_app/src/features/presentation/views/search_page.dart';
 import 'package:ecommerce_app/src/features/presentation/views/splash_screen.dart';
 import 'package:ecommerce_app/src/features/presentation/widgets/main_components/product_list.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +18,9 @@ class AppRoutes {
   static const String electronics = '/electronics';
   static const String jewllery = '/jewllery';
   static const String clothing = '/clothing';
+  static const String search = '/search';
+  static const String productdetail = '/productdetail';
+
 
 
 
@@ -36,6 +42,13 @@ class AppRoutes {
 
        case clothing:
        return NavigationHelper.createSlideRoute( const ClothingView());
+ 
+       case search:
+       return NavigationHelper.createSlideRoute( const SearchPage());
+
+      case productdetail:
+      final product = settings.arguments as Product;
+       return NavigationHelper.createSlideRoute( ProductDetailView(product: product,));
 
 
       

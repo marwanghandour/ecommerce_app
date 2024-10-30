@@ -7,7 +7,7 @@ class CustomSliverAppBar extends StatelessWidget {
   final Widget? leading;
   final List<Widget>? actions;
   final double expandedHeight;
-  final bool Ispinned;
+  final bool isPinned;
 
   const CustomSliverAppBar({
     super.key,
@@ -16,13 +16,13 @@ class CustomSliverAppBar extends StatelessWidget {
     this.backgroundImage,
     this.leading,
     this.actions,
-    this.expandedHeight = 200.0, required this.Ispinned,
+    this.expandedHeight = 200.0, required this.isPinned,
   });
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      pinned: Ispinned,
+      pinned: isPinned,
       expandedHeight: expandedHeight,
       flexibleSpace: FlexibleSpaceBar(
         title: title != null ? Text(title!) : null,

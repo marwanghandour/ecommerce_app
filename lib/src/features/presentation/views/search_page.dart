@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/src/core/utils/contants.dart';
+import 'package:ecommerce_app/src/features/presentation/widgets/components/search_widget.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
@@ -6,7 +6,11 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(top: 45),
+        child: SearchWidget(),
+      ),
     );
   }
 }

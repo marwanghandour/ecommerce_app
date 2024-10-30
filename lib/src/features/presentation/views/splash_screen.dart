@@ -22,6 +22,7 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
     _splashscreenCubit.stream.listen((state) {
       if (state.opacity == 0.0) {
   Navigator.pushNamedAndRemoveUntil(
+  // ignore: use_build_context_synchronously
   context,
   AppRoutes.home,
   (Route<dynamic> route) => false,

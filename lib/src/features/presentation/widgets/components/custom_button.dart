@@ -7,6 +7,7 @@ class CustomButton extends StatelessWidget {
   final double elevation;
   final BorderRadius borderRadius;
   final EdgeInsetsGeometry padding;
+  final Color? color;
 
   const CustomButton({
     super.key,
@@ -17,7 +18,7 @@ class CustomButton extends StatelessWidget {
       topLeft: Radius.circular(8.0),
       bottomRight: Radius.circular(8.0),
     ),
-    this.padding = const EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+    this.padding = const EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0), this.color,
   });
 
   @override
@@ -25,6 +26,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
+        backgroundColor: color,
         elevation: elevation,
         shape: RoundedRectangleBorder(
           borderRadius: borderRadius,
@@ -33,7 +35,7 @@ class CustomButton extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+        style: const TextStyle(color: Colors.white,fontSize: 16.0, fontWeight: FontWeight.bold),
       ),
     );
   }
