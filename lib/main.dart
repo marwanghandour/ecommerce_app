@@ -30,21 +30,26 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<ProductBloc>(
           create: (context) => ProductBloc(ProductRepository(Dio()))..add(FetchProducts()),
+        lazy: true,
         ),
 
          BlocProvider<ElectronicsProductsBloc>(
           create: (context) => ElectronicsProductsBloc(ProductRepository(Dio()))..add(FetchElectronics()),
+       lazy: true,
         ),
 
         BlocProvider<JewlleryBloc>(
           create: (context) => JewlleryBloc(ProductRepository(Dio()))..add(FetchJewllery()),
+       lazy: true,
         ),
 
         BlocProvider<ClothingBloc>(
           create: (context) => ClothingBloc(ProductRepository(Dio()))..add(FetchClothing()),
-        ),
+       lazy: true, ),
         
-        BlocProvider(create: (context)=> OnboardingBloc()),
+        BlocProvider(create: (context)=> OnboardingBloc(),
+        lazy: true,
+        ),
       ],
       child: BlocBuilder<ThemeBloc, ThemeData>(
         builder: (context, theme) {
