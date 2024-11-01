@@ -6,6 +6,7 @@ import 'package:ecommerce_app/src/features/presentation/blocs/electronics/electr
 import 'package:ecommerce_app/src/features/presentation/blocs/electronics/electronics_products_event.dart';
 import 'package:ecommerce_app/src/features/presentation/blocs/jewllery/jewllery_bloc.dart';
 import 'package:ecommerce_app/src/features/presentation/blocs/jewllery/jewllery_event.dart';
+import 'package:ecommerce_app/src/features/presentation/blocs/onboarding/onboarding_bloc.dart';
 import 'package:ecommerce_app/src/features/presentation/blocs/product/product_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,6 +43,8 @@ class MyApp extends StatelessWidget {
         BlocProvider<ClothingBloc>(
           create: (context) => ClothingBloc(ProductRepository(Dio()))..add(FetchClothing()),
         ),
+        
+        BlocProvider(create: (context)=> OnboardingBloc()),
       ],
       child: BlocBuilder<ThemeBloc, ThemeData>(
         builder: (context, theme) {

@@ -25,7 +25,7 @@ class JewlleryView extends StatelessWidget {
               slivers: [
                 CustomSliverAppBar(
                   expandedHeight: 0,
-            title: "Jewllery",
+            title: "Shoes",
             actions: [
               IconButton(
                 icon: const Icon(AppIcons.search),

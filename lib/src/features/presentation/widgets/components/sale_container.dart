@@ -7,7 +7,7 @@ class SaleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-          margin: const EdgeInsets.only(right: 10, left: 20),
+          margin: const EdgeInsets.only(right: 20, left: 25),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: AppColors.primaryDark,
@@ -19,6 +19,7 @@ class SaleContainer extends StatelessWidget {
           child: const Text(
             'Delivery is 50% Cheaper',
             style: TextStyle(
+              color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),

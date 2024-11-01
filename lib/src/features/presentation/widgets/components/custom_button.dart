@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
-
   final VoidCallback onPressed;
   final double elevation;
   final BorderRadius borderRadius;
@@ -35,7 +34,11 @@ class CustomButton extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: const TextStyle(color: Colors.white,fontSize: 16.0, fontWeight: FontWeight.bold),
+        style: const TextStyle(
+          fontSize: 16.0,
+           fontWeight: FontWeight.bold,
+           color: Colors.white
+           ),
       ),
     );
   }

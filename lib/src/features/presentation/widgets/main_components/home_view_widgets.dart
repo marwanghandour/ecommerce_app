@@ -62,7 +62,11 @@ class HomeViewWidgets extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  CustomButton(elevation: 0, text: 'Show all', onPressed: () {}),
+                  CustomButton(
+                    elevation: 0, 
+                    text: 'Show all',
+                     onPressed: () {}
+                     ),
                 ],
               ),
             ],

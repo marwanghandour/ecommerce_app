@@ -14,16 +14,16 @@ class CategoriesRow extends StatelessWidget {
           CategoryItem(
             imagePath: 'assets/images/electronics.png',
             onTap: (){ Navigator.pushNamed(context, AppRoutes.electronics);
-  }
+  },        title: 'Electronics',
   ),
           const SizedBox(width: 10),
           CategoryItem(
-            imagePath: 'assets/images/jew.png',
+            imagePath: 'assets/images/shoes.png',
             onTap: () {
               Navigator.pushNamed(context, 
               AppRoutes.jewllery,
               );
-            },
+            }, title: 'Shoes',
           ),
           const SizedBox(width: 10),
           CategoryItem(
@@ -32,7 +32,7 @@ class CategoriesRow extends StatelessWidget {
                Navigator.pushNamed(context, 
               AppRoutes.clothing,
               );
-            },
+            }, title: 'Fashion',
           ),
         ],
       ),

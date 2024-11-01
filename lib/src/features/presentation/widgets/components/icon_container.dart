@@ -13,9 +13,9 @@ class IconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.grey.shade500,
+        color: Colors.white,
       ),
       child: IconButton(
         icon: icon,

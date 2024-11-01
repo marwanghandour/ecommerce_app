@@ -13,7 +13,7 @@ class JewlleryBloc extends Bloc<JewlleryEvent, JewlleryState> {
   void _fetchJewllery(FetchJewllery event, Emitter<JewlleryState> emit) async {
     emit(JewlleryLoading());
     try {
-      final products = await productRepository.fetchJewllery();
+      final products = await productRepository.fetchShoes();
       emit(JewlleryLoaded(products));
     } catch (e) {
       emit(JewlleryError('Failed to fetch products'));

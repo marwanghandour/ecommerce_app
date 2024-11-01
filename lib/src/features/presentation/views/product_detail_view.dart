@@ -19,18 +19,18 @@ class ProductDetailView extends StatelessWidget {
           CustomSliverAppBar(
             leading: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: IconContainer(icon: const Icon(AppIcons.xsign),
+              child: IconContainer(icon: const Icon(AppIcons.xsign, color: Colors.black,),
               onPressed: (){
                 Navigator.pop(context);
               },
               ),
             ),
-            backgroundImage: product.image,
+            backgroundImage: product.images.first,
             expandedHeight: 600.0, 
             actions: const [
-              IconContainer(icon: Icon(Icons.favorite_border)),
+              IconContainer(icon: Icon(Icons.favorite_border, color: Colors.black,)),
               SizedBox(width: 10,),
-               IconContainer(icon: Icon(AppIcons.cart)),
+               IconContainer(icon: Icon(AppIcons.cart, )),
 
               SizedBox(width: 5,),
             ],isPinned: false,

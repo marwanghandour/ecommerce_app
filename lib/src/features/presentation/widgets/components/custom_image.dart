@@ -11,9 +11,9 @@ class CustomImage extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: CachedNetworkImage(
-        fit: BoxFit.contain,
+        fit: BoxFit.cover,
         imageUrl: imageUrl,
-        errorWidget: (context, url, error) => const Icon(
+        errorWidget: (context, url, error) => const Icon(color: Colors.red,
           AppIcons.error,
         ),
       ),

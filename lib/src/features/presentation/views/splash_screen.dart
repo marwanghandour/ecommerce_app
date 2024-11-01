@@ -24,7 +24,7 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
   Navigator.pushNamedAndRemoveUntil(
   // ignore: use_build_context_synchronously
   context,
-  AppRoutes.home,
+  AppRoutes.onboarding,
   (Route<dynamic> route) => false,
 );
 

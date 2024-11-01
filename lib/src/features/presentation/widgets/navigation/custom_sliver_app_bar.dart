@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/presentation/widgets/components/custom_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
@@ -27,10 +28,9 @@ class CustomSliverAppBar extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         title: title != null ? Text(title!) : null,
         background: backgroundImage != null
-            ? Image.network(
-                backgroundImage!,
-                fit: BoxFit.cover,
-              )
+            ? CustomImage(
+              imageUrl: backgroundImage!,
+               )
             : null,
       ),
       leading: leading,
