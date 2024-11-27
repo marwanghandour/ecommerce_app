@@ -63,7 +63,7 @@ class OnboardingView extends StatelessWidget {
                         color: AppColors.onBackgroundLight,
                         onPressed: () {
                           Navigator.pushNamedAndRemoveUntil(context, 
-                          AppRoutes.login, 
+                          AppRoutes.signup, 
                           (Route<dynamic> route) => false,
                           );
                         },

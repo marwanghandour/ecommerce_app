@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/src/features/auth/presentation/views/auth/sign_in_view.dart';
+import 'package:ecommerce_app/src/features/auth/presentation/views/auth/sign_up_page.dart';
 import 'package:ecommerce_app/src/features/home/data/models/product_model.dart';
 import 'package:ecommerce_app/src/features/home/presentation/views/clothing_view.dart';
 import 'package:ecommerce_app/src/features/home/presentation/views/electronics_category_view.dart';
@@ -22,6 +23,8 @@ class AppRoutes {
   static const String productdetail = '/productdetail';
   static const String onboarding = '/onboarding';
   static const String login = '/login';
+  static const String signup = '/signup';
+
 
 
 
@@ -57,6 +60,11 @@ class AppRoutes {
 
        case login:
        return NavigationHelper.createSlideRoute(const SignInPage());
+
+       case signup:
+       return NavigationHelper.createSlideRoute(const SignUpPage());
+
+
 
 
 
